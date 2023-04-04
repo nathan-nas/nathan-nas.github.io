@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Handling with Spring Boot and Thymeleaf</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Titan - Website lấy danh sách công ty</h1>
+
+<form th:action="@{/submit}" th:object="${data}" method="post">
+    <label for="inputField">Ngày:</label>
+    <input type="text" id="inputField" th:field="*{inputValue}" required>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
